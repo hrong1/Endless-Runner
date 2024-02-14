@@ -3,6 +3,9 @@ Haorong Rong
 */
 
 
+const SCALE = 0.5
+const tileSize = 35
+
 let config = {
     type: Phaser.AUTO,
     width: 640,
