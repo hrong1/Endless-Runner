@@ -3,8 +3,8 @@ Haorong Rong
 */
 
 
-const SCALE = 0.5
-const tileSize = 35
+const SCALE = 1
+const tileSize = 64
 
 let config = {
     type: Phaser.AUTO,
@@ -16,7 +16,7 @@ let config = {
             debug: true
         }
     },
-    scene: [ Menu, Play ]
+    scene: [ Menu, Play, End ]
 }
 
 let game = new Phaser.Game(config)
@@ -25,5 +25,7 @@ let game = new Phaser.Game(config)
 let borderUISize = game.config.height / 15
 let borderPadding = borderUISize / 3
 let highScore = 0;
+let currentpoint = 0;
+let animecreate = 0
 // reserve keyboard bindings
 let keySPACE, keyLEFT, keyRIGHT

@@ -4,7 +4,24 @@ class Menu extends Phaser.Scene {
     }
 
     preload(){
+        
+        this.load.path = './asset/img/'
+        this.load.image('ball', 'ball.png')
+        this.load.image('background', 'Background.png')
+        this.load.image('tile', 'tile.png')
+        // all art is create by me(hrong1)
+        this.load.path = './asset/sound/'
+        this.load.audio('hurt', 'Hit_hurt_1.mp3')
+        this.load.audio('jump', 'Jump_1.mp3')
+        this.load.audio('select', 'Blip_select_12.mp3')
+        // the 3 sound effect above is create by https://jfxr.frozenfractal.com/
+        this.load.audio('end', 'goodresult-82807.mp3')
+        //Sound Effect from <a href="https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=82807">Pixabay</a>
+        
+        this.load.audio('bgm', 'run-with-me-123095.mp3')
 
+        //Sound Effect by <a href="https://pixabay.com/users/purnanand_wasave-29922665/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=123095">Purnanand Wasave</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=123095">Pixabay</a>
+    
     }
 
     create(){
@@ -36,6 +53,7 @@ class Menu extends Phaser.Scene {
     update() {
         if (Phaser.Input.Keyboard.JustDown(keySPACE)) {
             this.scene.start('playScene')
+            this.sound.play('select')
         }
     }
     
